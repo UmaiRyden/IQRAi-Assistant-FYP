@@ -1,0 +1,58 @@
+{
+    "courses": {
+        "computer_science": {
+            "name": "Bachelor of Computer Science",
+            "duration": "4 years",
+            "requirements": ["High School Diploma", "Minimum GPA 2.5"],
+            "description": "Comprehensive program covering programming, algorithms, and computer systems"
+        },
+        "business": {
+            "name": "Bachelor of Business Administration",
+            "duration": "4 years",
+            "requirements": ["High School Diploma", "Minimum GPA 2.5"],
+            "description": "Program focusing on business management and administration"
+        }
+    },
+    "admissions": {
+        "requirements": {
+            "general": [
+                "Completed application form",
+                "High school transcripts",
+                "Valid ID proof",
+                "Passport size photographs"
+            ],
+            "international": [
+                "Valid passport",
+                "Student visa",
+                "English proficiency test scores"
+            ]
+        },
+        "deadlines": {
+            "fall": "August 1st",
+            "spring": "December 1st"
+        }
+    },
+    "policies": {
+        "attendance": {
+            "minimum_attendance": "75%",
+            "consequences": "May result in course failure"
+        },
+        "academic_integrity": {
+            "plagiarism": "Zero tolerance policy",
+            "penalties": "May result in expulsion"
+        }
+    },
+    "general_info": {
+        "location": "Main Campus Address",
+        "contact": {
+            "phone": "+1234567890",
+            "email": "info@university.edu"
+        },
+        "facilities": [
+            "Library",
+            "Computer Labs",
+            "Sports Complex",
+            "Cafeteria"
+        ]
+    }
+} 
