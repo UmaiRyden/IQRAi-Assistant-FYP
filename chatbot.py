@@ -118,7 +118,7 @@ async def start():
 - Iqra University Policies
 - General Information about Iqra University
 
-You can also upload documents (PDF, Word, or text files) related to Iqra University, and I'll help you understand them.
+You can also upload multiple documents (PDF, Word, or text files) related to Iqra University, and I'll help you understand them.
 
 Please note that I can only provide information about Iqra University. How can I assist you today?"""
     ).send()
