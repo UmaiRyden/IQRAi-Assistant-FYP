@@ -1,0 +1,1 @@
+It's still not workng, let's forget this for now. No I have to create multiple agents for different university departments. Like Front Desk, Student Affairs, Examination, Accounts, Degree, Administration, Admission. All of these agents will have their own tasks and personas according with their limitation and functionality.

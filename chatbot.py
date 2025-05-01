@@ -9,6 +9,7 @@ from openai.types.responses import ResponseTextDeltaEvent
 import PyPDF2
 import docx
 from io import BytesIO
+from openai import BadRequestError
 
 # Load environment variables from .env file
 load_dotenv(find_dotenv())
@@ -92,7 +93,7 @@ external_client = AsyncOpenAI(
 
 model = OpenAIChatCompletionsModel(
     model="gemini-2.0-flash",
-    openai_client=external_client
+    openai_client=external_client0
 )
 
 run_config = RunConfig(
@@ -183,24 +184,33 @@ async def handle_query(content: str, history: list, documents: dict):
             "content": doc_context
         })
 
-    # Get response from the agent
-    response_content = ""
-    result = Runner.run_streamed(
-        agent,
-        input=history,
-        run_config=run_config,
-    )
-    
-    async for event in result.stream_events():
-        if event.type == "raw_response_event" and isinstance(event.data, ResponseTextDeltaEvent):
-            token = event.data.delta
-            response_content += token
-            await msg.stream_token(token)
+    try:
+        # Get response from the agent
+        response_content = ""
+        result = Runner.run_streamed(
+            agent,
+            input=history,
+            run_config=run_config,
+        )
+        
+        async for event in result.stream_events():
+            if event.type == "raw_response_event" and isinstance(event.data, ResponseTextDeltaEvent):
+                token = event.data.delta
+                response_content += token
+                await msg.stream_token(token)
 
-    # Add assistant's response to history
-    history.append({
-        "role": "assistant",
-        "content": response_content
-    })
-    
-    cl.user_session.set("history", history)
+        # Add assistant's response to history
+        history.append({
+            "role": "assistant",
+            "content": response_content
+        })
+        
+        cl.user_session.set("history", history)
+        
+    except BadRequestError as e:
+        if "API key expired" in str(e):
+            await msg.update(content="I apologize, but there's an issue with the API key. Please contact the administrator to update the API key.")
+        else:
+            await msg.update(content=f"I apologize, but there was an error processing your request: {str(e)}")
+    except Exception as e:
+        await msg.update(content=f"I apologize, but there was an unexpected error: {str(e)}")
