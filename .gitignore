@@ -1,10 +1,79 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+# Root .gitignore for IQRAi University FYP Project
 
-# Virtual environments
-.venv
+# Node (Frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+.next/
+dist/
+out/
+build/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Temp files
+*.tmp
+*.log
+*.cache
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python (Backend)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project specific
+chatbot-backend/analytics.json
+chatbot-backend/chat.db
+chatbot-backend/uploaded_docs/*
+chatbot-backend/course_advisor_uploads/*
+chatbot-backend/learning_uploads/*
+chatbot-backend/obe_uploads/*
+!chatbot-backend/uploaded_docs/.gitkeep
+!chatbot-backend/course_advisor_uploads/.gitkeep
+!chatbot-backend/learning_uploads/.gitkeep
+!chatbot-backend/obe_uploads/.gitkeep
+
