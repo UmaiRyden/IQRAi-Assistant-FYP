@@ -1,0 +1,25 @@
+CS101 - Introduction to Computer Science
+Midterm Examination
+
+Instructions: Answer all questions.
+
+1. Define what an algorithm is in computer science.
+
+2. Explain the difference between a compiler and an interpreter.
+
+3. Describe how variables are stored in memory.
+
+4. List the four basic principles of Object-Oriented Programming.
+
+5. Identify the syntax errors in the following code snippet.
+
+6. Apply the concept of loops to solve the Fibonacci sequence problem.
+
+7. Analyze the time complexity of the bubble sort algorithm.
+
+8. Compare and contrast Arrays and Linked Lists data structures.
+
+9. Evaluate which sorting algorithm would be most efficient for a nearly-sorted array.
+
+10. Design a simple class structure for a library management system.
+

@@ -1,0 +1,412 @@
+{
+    "programs": {
+        "undergraduate": [
+            "BE Electronics",
+            "BE Electrical",
+            "BE Software Engineering",
+            "BS Computer Science",
+            "BS Software Engineering",
+            "BS Artificial Intelligence",
+            "BS Cyber Security",
+            "BBA",
+            "BS Accounting & Finance",
+            "BS Business Analytics",
+            "BS Digital Marketing",
+            "BS Entrepreneurship",
+            "Doctor of Pharmacy",
+            "Doctor of Physical Therapy",
+            "BS Nursing",
+            "BS Human Nutrition & Dietetics",
+            "BS Psychology",
+            "BS Media Studies",
+            "BS Film & TV Production",
+            "BS Animation",
+            "BS Fashion Design",
+            "BS Textile Design",
+            "B.Ed.",
+            "BS English",
+            "BS Education",
+            "BS Social Sciences"
+        ],
+        "graduate": [
+            "MS Computer Science",
+            "MS Artificial Intelligence",
+            "MS Project Management",
+            "MS Media Studies",
+            "MS Data Science",
+            "MBA General",
+            "MBA Finance & Technology",
+            "MPhil Business Administration",
+            "MPhil Education",
+            "MPhil English",
+            "MPhil Computer Science",
+            "MPhil Media Studies",
+            "PhD Business Administration",
+            "PhD Education",
+            "PhD English",
+            "PhD Computer Science",
+            "PhD Media Studies"
+        ],
+        "associate_and_diploma": [
+            "ADP Business Administration",
+            "ADP Accounting & Finance",
+            "Certifications in Digital Marketing, Business Analytics, Nursing, Education"
+        ]
+    },
+    "campuses": {
+        "karachi": [
+            "Main Campus (Defence View)",
+            "Gulshan Campus",
+            "North Campus",
+            "Bahria Town Campus",
+            "Malir Campus"
+        ],
+        "islamabad": [
+            "H-9 Campus",
+            "Chak Shahzad Campus"
+        ],
+        "peshawar": [
+            "Hayatabad Campus"
+        ]
+    },
+    "academic_calendar": {
+        "spring_2025": {
+            "classes_begin": "February 17, 2025",
+            "midterm_exams": "April 21\u201327, 2025",
+            "withdrawal_deadline": "May 11, 2025",
+            "final_exams": "June 23\u201330, 2025",
+            "results_announcement": "July 6, 2025"
+        }
+    },
+    "admission_process": [
+        "Online application at admissions.iqra.edu.pk",
+        "Complete personal and academic form",
+        "Pay Rs. 1,000 processing fee",
+        "Receive admit card",
+        "Entrance test (MCQs on English, Math, GK, IQ)",
+        "Interview",
+        "Submit semester fee",
+        "Receive student ID"
+    ],
+    "scholarships": [
+        "Merit-Based",
+        "Need-Based",
+        "Sibling Fee Concession",
+        "Special Scholarships for Hafiz-e-Quran, orphans, and differently-abled students"
+    ],
+    "facilities_and_life": {
+        "facilities": [
+            "Digital library",
+            "Advanced labs",
+            "Design studios",
+            "Sports complex"
+        ],
+        "societies": [
+            "CSR Society",
+            "Debates and Literary Society",
+            "Dramatics Society",
+            "Marketing Society",
+            "Entrepreneurship Society",
+            "Media and Film Society",
+            "Gaming and Robotics Society",
+            "Climate Change Society",
+            "Photography Society",
+            "Islamic Guidance Club",
+            "NISA Society",
+            "Freelancing Society",
+            "Ushers Club",
+            "Health and Fitness Club",
+            "Wellbeing Society",
+            "Music Society",
+            "Sports Society",
+            "Events Society"
+        ],
+        "career_services": [
+            "Internship placements",
+            "Job fairs",
+            "Resume workshops"
+        ]
+    },
+    "policies": {
+        "academic_integrity": "Strict anti-plagiarism and cheating policies",
+        "social_media_usage": "Guidelines to uphold university reputation",
+        "drug_tobacco_policy": "Zero tolerance on campus",
+        "grievance_redressal": "Formal complaint channels",
+        "attendance": {
+            "minimum_attendance": "75%",
+            "consequences": "May result in course failure"
+        }
+    },
+    "fee_structure": {
+        "karachi_bs": {
+            "admission_fee": 10000,
+            "tuition_per_credit_hour": 6200,
+            "total_credit_hours": 137,
+            "additional_fees": {
+                "registration_fee": 1000,
+                "student_fund": 1250,
+                "library_fund": 950,
+                "sports_fee": 850,
+                "technology_fee": 970,
+                "misc_fee": 500
+            },
+            "estimated_1st_semester_total": 127120
+        },
+        "islamabad_adp": {
+            "business_admin": {
+                "total_credits": 68,
+                "fee_per_credit_hour": 6510,
+                "estimated_1st_semester_fee": 116640
+            }
+        }
+    },
+    "courses": {
+        "computer_science": {
+            "name": "Bachelor of Computer Science",
+            "duration": "4 years",
+            "requirements": [
+                "High School Diploma",
+                "Minimum GPA 2.5"
+            ],
+            "description": "Comprehensive program covering programming, algorithms, and computer systems"
+        },
+        "business": {
+            "name": "Bachelor of Business Administration",
+            "duration": "4 years",
+            "requirements": [
+                "High School Diploma",
+                "Minimum GPA 2.5"
+            ],
+            "description": "Program focusing on business management and administration"
+        }
+    },
+    "admissions": {
+        "requirements": {
+            "general": [
+                "Completed application form",
+                "High school transcripts",
+                "Valid ID proof",
+                "Passport size photographs"
+            ],
+            "international": [
+                "Valid passport",
+                "Student visa",
+                "English proficiency test scores"
+            ]
+        },
+        "deadlines": {
+            "fall": "August 1st",
+            "spring": "December 1st"
+        }
+    },
+    "general_info": {
+        "location": "Main Campus Address",
+        "contact": {
+            "phone": "+1234567890",
+            "email": "info@university.edu"
+        },
+        "facilities": [
+            "Library",
+            "Computer Labs",
+            "Sports Complex",
+            "Cafeteria"
+        ]
+    },
+    "course_prerequisites": {
+        "CMC111": {
+            "name": "Programming Fundamentals",
+            "prerequisites": []
+        },
+        "GER111": {
+            "name": "Application of ICT",
+            "prerequisites": []
+        },
+        "GER121": {
+            "name": "Functional English",
+            "prerequisites": []
+        },
+        "GER131": {
+            "name": "Calculus & Analytic Geometry",
+            "prerequisites": []
+        },
+        "GER151": {
+            "name": "Applied Physics",
+            "prerequisites": []
+        },
+        "GER141": {
+            "name": "Islamic Studies",
+            "prerequisites": []
+        },
+        "MTE111": {
+            "name": "Multivariable Calculus",
+            "prerequisites": [
+                "Calculus & Analytic Geometry"
+            ]
+        },
+        "CMC112": {
+            "name": "Object-Oriented Programming",
+            "prerequisites": [
+                "Programming Fundamentals"
+            ]
+        },
+        "CMC121": {
+            "name": "Digital Logic Design",
+            "prerequisites": [
+                "Applied Physics"
+            ]
+        },
+        "GER122": {
+            "name": "Expository Writing",
+            "prerequisites": [
+                "Functional English"
+            ]
+        },
+        "GER132": {
+            "name": "Discrete Structures",
+            "prerequisites": [
+                "Calculus & Analytic Geometry"
+            ]
+        },
+        "GER142": {
+            "name": "Ideology & Constitution of Pakistan",
+            "prerequisites": []
+        },
+        "MTE212": {
+            "name": "Probability & Statistics",
+            "prerequisites": [
+                "Multivariable Calculus"
+            ]
+        },
+        "CMC222": {
+            "name": "Computer Organization & Assembly Language",
+            "prerequisites": [
+                "Digital Logic Design"
+            ]
+        },
+        "CMC251": {
+            "name": "Data Structures",
+            "prerequisites": [
+                "Object-Oriented Programming"
+            ]
+        },
+        "CSC252": {
+            "name": "Theory of Automata",
+            "prerequisites": [
+                "Discrete Structures"
+            ]
+        },
+        "CMC261": {
+            "name": "Computer Networks",
+            "prerequisites": [
+                "Digital Logic Design"
+            ]
+        },
+        "MTE213": {
+            "name": "Linear Algebra",
+            "prerequisites": [
+                "Multivariable Calculus"
+            ]
+        },
+        "MTE221": {
+            "name": "Technical & Business Writing",
+            "prerequisites": [
+                "Expository Writing"
+            ]
+        },
+        "CSC223": {
+            "name": "Computer Architecture",
+            "prerequisites": [
+                "Computer Organization & Assembly Language"
+            ]
+        },
+        "CMC241": {
+            "name": "Operating Systems",
+            "prerequisites": [
+                "Data Structures"
+            ]
+        },
+        "CMC253": {
+            "name": "Analysis of Algorithms",
+            "prerequisites": [
+                "Data Structures"
+            ]
+        },
+        "CMC331": {
+            "name": "Database Systems",
+            "prerequisites": [
+                "Operating Systems"
+            ]
+        },
+        "CSC354": {
+            "name": "Compiler Construction",
+            "prerequisites": [
+                "Theory of Automata"
+            ]
+        },
+        "CMC362": {
+            "name": "Information Security",
+            "prerequisites": [
+                "Computer Networks"
+            ]
+        },
+        "CMC371": {
+            "name": "Software Engineering",
+            "prerequisites": [
+                "Analysis of Algorithms"
+            ]
+        },
+        "CSC332": {
+            "name": "Advanced Database Management Systems",
+            "prerequisites": [
+                "Database Systems"
+            ]
+        },
+        "CMC381": {
+            "name": "Artificial Intelligence",
+            "prerequisites": [
+                "Analysis of Algorithms",
+                "Software Engineering"
+            ]
+        },
+        "CSC382": {
+            "name": "HCI & Computer Graphics",
+            "prerequisites": [
+                "Software Engineering"
+            ]
+        },
+        "CSC442": {
+            "name": "Parallel & Distributed Computing",
+            "prerequisites": [
+                "Operating Systems",
+                "HCI & Computer Graphics"
+            ]
+        },
+        "GER462": {
+            "name": "Technopreneurship",
+            "prerequisites": []
+        },
+        "CMC491": {
+            "name": "Final Year Project I",
+            "prerequisites": [
+                "Artificial Intelligence",
+                "Database Systems",
+                "Software Engineering",
+                "Operating Systems"
+            ]
+        },
+        "GER443": {
+            "name": "Civics and Community Engagement",
+            "prerequisites": []
+        },
+        "GER463": {
+            "name": "Professional Practices",
+            "prerequisites": []
+        },
+        "CMC492": {
+            "name": "Final Year Project II",
+            "prerequisites": [
+                "Final Year Project I"
+            ]
+        }
+    }
+}

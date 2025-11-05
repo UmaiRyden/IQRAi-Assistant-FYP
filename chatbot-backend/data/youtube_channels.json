@@ -1,0 +1,153 @@
+{
+  "CSC101": [
+    "3Blue1Brown",
+    "Khan Academy",
+    "Professor Leonard",
+    "MIT OpenCourseWare"
+  ],
+  "CSC111": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "The Net Ninja",
+    "Programming with Mosh"
+  ],
+  "CSC131": [
+    "freeCodeCamp.org",
+    "Corey Schafer",
+    "Programming with Mosh",
+    "Tech With Tim"
+  ],
+  "CSC232": [
+    "freeCodeCamp.org",
+    "Programming with Mosh",
+    "Derek Banas",
+    "Cave of Programming"
+  ],
+  "CSC233": [
+    "Back To Back SWE",
+    "Abdul Bari",
+    "GeeksforGeeks",
+    "Jenny's Lectures CS IT"
+  ],
+  "CSC331": [
+    "Abdul Bari",
+    "freeCodeCamp.org",
+    "GeeksforGeeks",
+    "Jenny's Lectures CS IT"
+  ],
+  "CSC332": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "The Net Ninja",
+    "Code with Harry"
+  ],
+  "CSC341": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "The Net Ninja",
+    "Web Dev Simplified"
+  ],
+  "CSC342": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "The Net Ninja",
+    "Web Dev Simplified"
+  ],
+  "CSC351": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "The Net Ninja",
+    "Web Dev Simplified"
+  ],
+  "CSC352": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "The Net Ninja",
+    "Web Dev Simplified"
+  ],
+  "CSC361": [
+    "freeCodeCamp.org",
+    "NetworkChuck",
+    "David Bombal",
+    "Professor Messer"
+  ],
+  "CSC362": [
+    "freeCodeCamp.org",
+    "NetworkChuck",
+    "David Bombal",
+    "Professor Messer"
+  ],
+  "CSC371": [
+    "3Blue1Brown",
+    "StatQuest",
+    "Krish Naik",
+    "sentdex"
+  ],
+  "CSC372": [
+    "3Blue1Brown",
+    "StatQuest",
+    "Krish Naik",
+    "sentdex"
+  ],
+  "CSC381": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "The Net Ninja",
+    "Web Dev Simplified"
+  ],
+  "CSC382": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "The Net Ninja",
+    "Web Dev Simplified"
+  ],
+  "CSC441": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "The Net Ninja",
+    "Web Dev Simplified"
+  ],
+  "CSC442": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "The Net Ninja",
+    "Web Dev Simplified"
+  ],
+  "general_programming": [
+    "freeCodeCamp.org",
+    "Programming with Mosh",
+    "Traversy Media",
+    "The Net Ninja"
+  ],
+  "data_science": [
+    "Krish Naik",
+    "StatQuest",
+    "sentdex",
+    "Corey Schafer"
+  ],
+  "ai_ml": [
+    "3Blue1Brown",
+    "sentdex",
+    "Krish Naik",
+    "StatQuest"
+  ],
+  "cybersecurity": [
+    "NetworkChuck",
+    "David Bombal",
+    "Professor Messer",
+    "John Hammond"
+  ],
+  "web_dev": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "Web Dev Simplified",
+    "The Net Ninja"
+  ],
+  "mobile_dev": [
+    "freeCodeCamp.org",
+    "Traversy Media",
+    "The Net Ninja",
+    "Programming with Mosh"
+  ]
+}
+

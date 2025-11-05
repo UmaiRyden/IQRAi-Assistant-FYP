@@ -1,0 +1,22 @@
+python-dotenv
+chainlit
+openai
+openai-agents
+PyPDF2
+python-docx
+pinecone
+sentence-transformers
+
+# FastAPI dependencies
+fastapi
+uvicorn[standard]
+sse-starlette
+sqlalchemy
+aiosqlite
+httpx
+pydantic
+
+# Voice input dependencies
+openai-whisper
+pydub
+ffmpeg-python 

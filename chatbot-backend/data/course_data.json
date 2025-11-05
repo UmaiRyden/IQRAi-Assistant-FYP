@@ -1,0 +1,808 @@
+[
+    {
+      "course_code": "CSC101",
+      "course_name": "Applied Physics",
+      "semester": 1,
+      "prerequisites": []
+    },
+    {
+      "course_code": "CSC101L",
+      "course_name": "Applied Physics (lab)",
+      "semester": 1,
+      "prerequisites": []
+    },
+    {
+      "course_code": "CSC102",
+      "course_name": "Calculus & Analytical Geometry",
+      "semester": 1,
+      "prerequisites": []
+    },
+    {
+      "course_code": "HUM111",
+      "course_name": "Functional English",
+      "semester": 1,
+      "prerequisites": []
+    },
+    {
+      "course_code": "CSC111",
+      "course_name": "Introduction To Information & Communication Technology",
+      "semester": 1,
+      "prerequisites": []
+    },
+    {
+      "course_code": "CSC111L",
+      "course_name": "Intro. To Information And Communication Tech (lab)",
+      "semester": 1,
+      "prerequisites": []
+    },
+    {
+      "course_code": "HMT121",
+      "course_name": "Islamic Studies",
+      "semester": 1,
+      "prerequisites": []
+    },
+    {
+      "course_code": "HMT122",
+      "course_name": "Pakistan Studies",
+      "semester": 1,
+      "prerequisites": []
+    },
+    {
+      "course_code": "HUM231",
+      "course_name": "Communication Skills",
+      "semester": 2,
+      "prerequisites": [
+        {
+          "prerequisite_code": "HUM111",
+          "prerequisite_name": "Functional English"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC231",
+      "course_name": "Digital Logic & Design",
+      "semester": 2,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC101",
+          "prerequisite_name": "Applied Physics"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC231L",
+      "course_name": "Digital Logic & Design (lab)",
+      "semester": 2,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC101L",
+          "prerequisite_name": "Applied Physics (lab)"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC103",
+      "course_name": "Multivariate Calculus",
+      "semester": 2,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC102",
+          "prerequisite_name": "Calculus & Analytical Geometry"
+        }
+      ]
+    },
+    {
+      "course_code": "HUM112",
+      "course_name": "Personal Development",
+      "semester": 2,
+      "prerequisites": []
+    },
+    {
+      "course_code": "CSC131",
+      "course_name": "Programming Fundamentals",
+      "semester": 2,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information & Communication Technology"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC131L",
+      "course_name": "Programming Fundamentals (lab)",
+      "semester": 2,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information & Communication Technology"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC221",
+      "course_name": "Computer Organization & Assembly Language",
+      "semester": 3,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC221L",
+      "course_name": "Computer Organization & Assembly Language(lab)",
+      "semester": 3,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Intro. To Information & Communication Tech."
+        },
+        {
+          "prerequisite_code": "CSC231",
+          "prerequisite_name": "Digital Logic & Design"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        }
+      ]
+    },
+    {
+      "course_code": "BUS201",
+      "course_name": "Financial Accounting Principles",
+      "semester": 3,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC102",
+          "prerequisite_name": "Calculus & Analytical Geometry"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC201",
+      "course_name": "Linear Algebra & Differential Equations",
+      "semester": 3,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC102",
+          "prerequisite_name": "Calculus & Analytical Geometry"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC232",
+      "course_name": "Object Oriented Programming",
+      "semester": 3,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC232L",
+      "course_name": "Object Oriented Programming (lab)",
+      "semester": 3,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Intro. To Information & Communication Tech."
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        }
+      ]
+    },
+    {
+      "course_code": "HUM233",
+      "course_name": "Philosophy And Critical Thinking",
+      "semester": 3,
+      "prerequisites": [
+        {
+          "prerequisite_code": "HUM112",
+          "prerequisite_name": "Personal Development"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC233",
+      "course_name": "Data Structures And Algorithms",
+      "semester": 4,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information & Communication Technology"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        },
+        {
+          "prerequisite_code": "CSC232",
+          "prerequisite_name": "Object Oriented Programming"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC233L",
+      "course_name": "Data Structures And Algorithms (lab)",
+      "semester": 4,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information & Communication Technology"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        },
+        {
+          "prerequisite_code": "CSC232",
+          "prerequisite_name": "Object Oriented Programming"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC241",
+      "course_name": "Discrete Structures",
+      "semester": 4,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC102",
+          "prerequisite_name": "Calculus & Analytical Geometry"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC222",
+      "course_name": "Operating Systems",
+      "semester": 4,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC221",
+          "prerequisite_name": "Computer Organization & Assembly Language"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        },
+        {
+          "prerequisite_code": "CSC231",
+          "prerequisite_name": "Digital Logic & Design"
+        },
+        {
+          "prerequisite_code": "CSC101",
+          "prerequisite_name": "Applied Physics"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC222L",
+      "course_name": "Operating Systems (lab)",
+      "semester": 4,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC221",
+          "prerequisite_name": "Computer Organization & Assembly Language"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        },
+        {
+          "prerequisite_code": "CSC231",
+          "prerequisite_name": "Digital Logic & Design"
+        },
+        {
+          "prerequisite_code": "CSC101",
+          "prerequisite_name": "Applied Physics"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC202",
+      "course_name": "Probability And Statistics",
+      "semester": 4,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC102",
+          "prerequisite_name": "Calculus & Analytical Geometry"
+        },
+        {
+          "prerequisite_code": "CSC201",
+          "prerequisite_name": "Linear Algebra & Differential Equations"
+        }
+      ]
+    },
+    {
+      "course_code": "HUM113",
+      "course_name": "Sociology",
+      "semester": 4,
+      "prerequisites": [
+        {
+          "prerequisite_code": "HUM111",
+          "prerequisite_name": "Functional English"
+        }
+      ]
+    },
+    {
+      "course_code": "SSC231",
+      "course_name": "World History",
+      "semester": 4,
+      "prerequisites": [
+        {
+          "prerequisite_code": "HUM111",
+          "prerequisite_name": "Functional English"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC361",
+      "course_name": "Data Communications & Computer Networks",
+      "semester": 5,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information & Communication Technology"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC361L",
+      "course_name": "Data Communications & Computer Networks (lab)",
+      "semester": 5,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information & Communication Technology"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC331",
+      "course_name": "Database Management Systems",
+      "semester": 5,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information & Communication Technology"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC331L",
+      "course_name": "Database Management Systems (lab)",
+      "semester": 5,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information & Communication Technology"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC351",
+      "course_name": "Database Management Systems",
+      "semester": 5,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC222",
+          "prerequisite_name": "Operating Systems"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Object Oriented Programming"
+        },
+        {
+          "prerequisite_code": "CSC233",
+          "prerequisite_name": "Data Structures And Algorithms"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC332",
+      "course_name": "Design And Theory Of Algorithm",
+      "semester": 5,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC102",
+          "prerequisite_name": "Calculus & Analytical Geometry"
+        },
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information & Communication Technology"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        },
+        {
+          "prerequisite_code": "CSC233",
+          "prerequisite_name": "Data Structures And Algorithms"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC333",
+      "course_name": "Introduction To Python",
+      "semester": 6,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information And Communication Tech"
+        },
+        {
+          "prerequisite_code": "CSC232",
+          "prerequisite_name": "Object Oriented Programming"
+        },
+        {
+          "prerequisite_code": "CSC233",
+          "prerequisite_name": "Data Structures And Algorithms"
+        }
+      ]
+    },
+    {
+      "course_code": "HUM241",
+      "course_name": "World Literature",
+      "semester": 6,
+      "prerequisites": [
+        {
+          "prerequisite_code": "HUM111",
+          "prerequisite_name": "Functional English"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC342",
+      "course_name": "Computer Construction",
+      "semester": 6,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC341",
+          "prerequisite_name": "Theory Of Automata"
+        }
+      ]
+    },
+    {
+      "course_code": "XX-XXX",
+      "course_name": "Computer Science Elective I",
+      "semester": 6,
+      "prerequisites": []
+    },
+    {
+      "course_code": "XX-XXX",
+      "course_name": "Computer Science Elective II",
+      "semester": 6,
+      "prerequisites": []
+    },
+    {
+      "course_code": "CSC351",
+      "course_name": "Software Engineering",
+      "semester": 6,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC331",
+          "prerequisite_name": "Database Management Systems"
+        },
+        {
+          "prerequisite_code": "CSC232",
+          "prerequisite_name": "Object Oriented Programming"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        },
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information And Communication Tech"
+        },
+        {
+          "prerequisite_code": "CSC241",
+          "prerequisite_name": "Discrete Structures"
+        },
+        {
+          "prerequisite_code": "CSC102",
+          "prerequisite_name": "Calculus & Analytical Geometry"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC341",
+      "course_name": "Theory Of Automata",
+      "semester": 6,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC102",
+          "prerequisite_name": "Calculus & Analytical Geometry"
+        }
+      ]
+    },
+    {
+      "course_code": "HUM121",
+      "course_name": "Academic & Professional Writing",
+      "semester": 7,
+      "prerequisites": [
+        {
+          "prerequisite_code": "HUM111",
+          "prerequisite_name": "Functional English"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC471",
+      "course_name": "Artificial Intelligence",
+      "semester": 7,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC233",
+          "prerequisite_name": "Data Structures And Algorithms"
+        },
+        {
+          "prerequisite_code": "CSC231",
+          "prerequisite_name": "Object Oriented Programming"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        },
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Intro. To Computer Science & Programming"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC471L",
+      "course_name": "Artificial Intelligence (lab)",
+      "semester": 7,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC233",
+          "prerequisite_name": "Data Structures And Algorithms"
+        },
+        {
+          "prerequisite_code": "CSC231",
+          "prerequisite_name": "Object Oriented Programming"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        },
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Intro. To Computer Science & Programming"
+        }
+      ]
+    },
+    {
+      "course_code": "XX-XXX",
+      "course_name": "Computer Science Elective III",
+      "semester": 7,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC221",
+          "prerequisite_name": "Computer Organization & Assembly Language"
+        },
+        {
+          "prerequisite_code": "CSC231",
+          "prerequisite_name": "Digital Logic & Design"
+        },
+        {
+          "prerequisite_code": "CSC101",
+          "prerequisite_name": "Applied Physics"
+        },
+        {
+          "prerequisite_code": "CSC222",
+          "prerequisite_name": "Operating Systems"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC321",
+      "course_name": "Embedded Systems",
+      "semester": 7,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC221L",
+          "prerequisite_name": "Computer Organization & Assembly Language"
+        },
+        {
+          "prerequisite_code": "CSC231",
+          "prerequisite_name": "Digital Logic & Design"
+        },
+        {
+          "prerequisite_code": "CSC101",
+          "prerequisite_name": "Applied Physics"
+        },
+        {
+          "prerequisite_code": "CSC222",
+          "prerequisite_name": "Operating Systems"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC321L",
+      "course_name": "Embedded Systems (lab)",
+      "semester": 7,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC221L",
+          "prerequisite_name": "Computer Organization & Assembly Language"
+        },
+        {
+          "prerequisite_code": "CSC231",
+          "prerequisite_name": "Digital Logic & Design"
+        },
+        {
+          "prerequisite_code": "CSC101",
+          "prerequisite_name": "Applied Physics"
+        },
+        {
+          "prerequisite_code": "CSC222",
+          "prerequisite_name": "Operating Systems"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC441",
+      "course_name": "Final Year Project-I",
+      "semester": 7,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC351",
+          "prerequisite_name": "Software Engineering"
+        },
+        {
+          "prerequisite_code": "CSC332",
+          "prerequisite_name": "Design And Theory Of Algorithm"
+        },
+        {
+          "prerequisite_code": "CSC331",
+          "prerequisite_name": "Database Management Systems"
+        },
+        {
+          "prerequisite_code": "CSC231",
+          "prerequisite_name": "Object Oriented Programming"
+        },
+        {
+          "prerequisite_code": "CSC233",
+          "prerequisite_name": "Data Structures And Algorithms"
+        },
+        {
+          "prerequisite_code": "CSC131",
+          "prerequisite_name": "Programming Fundamentals"
+        },
+        {
+          "prerequisite_code": "CSC111",
+          "prerequisite_name": "Introduction To Information & Communication Technology"
+        },
+        {
+          "prerequisite_code": "CSC241",
+          "prerequisite_name": "Discrete Structures"
+        },
+        {
+          "prerequisite_code": "CSC201",
+          "prerequisite_name": "Linear Algebra & Differential Equations"
+        },
+        {
+          "prerequisite_code": "CSC361",
+          "prerequisite_name": "Data Communications & Computer Networks"
+        },
+        {
+          "prerequisite_code": "CSC221",
+          "prerequisite_name": "Computer Organization & Assembly Language"
+        },
+        {
+          "prerequisite_code": "CSC222",
+          "prerequisite_name": "Operating Systems"
+        },
+        {
+          "prerequisite_code": "CSC341",
+          "prerequisite_name": "Theory Of Automata"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC431",
+      "course_name": "Parallel And Distributed Computing",
+      "semester": 7,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC361",
+          "prerequisite_name": "Data Communications & Computer Networks"
+        },
+        {
+          "prerequisite_code": "CSC331",
+          "prerequisite_name": "Database Management Systems"
+        },
+        {
+          "prerequisite_code": "CSC351",
+          "prerequisite_name": "Software Engineering"
+        },
+        {
+          "prerequisite_code": "CSC222",
+          "prerequisite_name": "Operating Systems"
+        }
+      ]
+    },
+    {
+      "course_code": "XX-XXX",
+      "course_name": "Computer Science Elective IV",
+      "semester": 8,
+      "prerequisites": []
+    },
+    {
+      "course_code": "XX-XXX",
+      "course_name": "Computer Science Elective V",
+      "semester": 8,
+      "prerequisites": []
+    },
+    {
+      "course_code": "HUM232",
+      "course_name": "Ethics & Social Responsibility",
+      "semester": 8,
+      "prerequisites": []
+    },
+    {
+      "course_code": "CSC442",
+      "course_name": "Final Year Project-II",
+      "semester": 8,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC441",
+          "prerequisite_name": "Final Year Project-I"
+        },
+        {
+          "prerequisite_code": "CSC221",
+          "prerequisite_name": "Computer Organization & Assembly Language"
+        },
+        {
+          "prerequisite_code": "CSC222",
+          "prerequisite_name": "Operating Systems"
+        },
+        {
+          "prerequisite_code": "CSC121",
+          "prerequisite_name": "Digital Logic & Design"
+        },
+        {
+          "prerequisite_code": "CSC361",
+          "prerequisite_name": "Data Communications & Computer Networks"
+        }
+      ]
+    },
+    {
+      "course_code": "CSC412",
+      "course_name": "Information Security",
+      "semester": 8,
+      "prerequisites": [
+        {
+          "prerequisite_code": "CSC221",
+          "prerequisite_name": "Computer Organization & Assembly Language"
+        },
+        {
+          "prerequisite_code": "CSC222",
+          "prerequisite_name": "Operating Systems"
+        },
+        {
+          "prerequisite_code": "CSC121",
+          "prerequisite_name": "Digital Logic & Design"
+        },
+        {
+          "prerequisite_code": "CSC361",
+          "prerequisite_name": "Data Communications & Computer Networks"
+        }
+      ]
+    }
+  ]
