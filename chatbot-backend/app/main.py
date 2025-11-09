@@ -55,11 +55,25 @@ app.add_middleware(
 )
 
 # Initialize services
+print("🔄 Initializing services...")
 db_store = SessionStore()
+print("✅ SessionStore initialized")
+
+print("🔄 Initializing AgentService...")
 agent_service = AgentService()
+print("✅ AgentService initialized")
+
+print("🔄 Initializing OBEService...")
 obe_service = OBEService()
+print("✅ OBEService initialized")
+
+print("🔄 Initializing LearningService...")
 learning_service = LearningService()
+print("✅ LearningService initialized")
+
+print("🔄 Initializing AnalyticsService...")
 analytics_service = AnalyticsService()
+print("✅ AnalyticsService initialized")
 
 # Set analytics service for GPA calculator (after initialization)
 from app.routes import gpa_calculator as gpa_calculator_module
@@ -1718,21 +1732,56 @@ async def course_advisor_chat(
             except json.JSONDecodeError:
                 pass
         
-        # Build prompt with context
+        # Build prompt with rich context
         prompt = message
         if context_data:
             completed = context_data.get("completed_courses", [])
             eligible = context_data.get("eligible_courses", [])
             fyp = context_data.get("fyp_progress", {})
             
-            context_str = f"""
-STUDENT CONTEXT:
-- Completed Courses: {', '.join(completed) if completed else 'None'}
-- Eligible Next Courses: {len(eligible)} courses available
-- FYP Progress: {fyp.get('completed_prereqs', 0)}/{fyp.get('total_prereqs', 0)} prerequisites completed
+            # Get detailed eligible course info
+            eligible_details = []
+            if eligible and course_advisor_service:
+                for course_code in eligible[:15]:  # Limit to top 15 for context
+                    course = next((c for c in course_advisor_service.course_data 
+                                 if c.get("course_code") == course_code), None)
+                    if course:
+                        course_name = course.get("course_name", "")
+                        is_fyp = course.get("is_fyp_prerequisite", False)
+                        eligible_details.append({
+                            "code": course_code,
+                            "name": course_name,
+                            "is_fyp_prerequisite": is_fyp
+                        })
+            
+            # Sort: FYP prerequisites first
+            eligible_details.sort(key=lambda x: (not x["is_fyp_prerequisite"], x["code"]))
+            
+            # Build detailed context
+            eligible_list = "\n".join([
+                f"- **{c['code']}** - {c['name']}" + (" (FYP Prerequisite)" if c["is_fyp_prerequisite"] else "")
+                for c in eligible_details[:12]  # Top 12 courses
+            ])
+            
+            missing_fyp = fyp.get("remaining_prereq_codes", [])[:10]
+            missing_fyp_list = "\n".join([f"- {code}" for code in missing_fyp]) if missing_fyp else "None"
+            
+            context_str = f"""STUDENT TRANSCRIPT ANALYSIS:
 
-User Question: {message}
-"""
+**Completed Courses** ({len(completed)}):
+{', '.join(completed[:20]) if completed else 'None'}{'...' if len(completed) > 20 else ''}
+
+**Eligible Next Courses** ({len(eligible)} available):
+{eligible_list if eligible_list else 'None'}
+
+**FYP (CSC441) Progress**:
+- Completed: {fyp.get('completed_prereqs', 0)}/{fyp.get('total_prereqs', 0)} prerequisites
+- Remaining: {fyp.get('remaining_prereqs', 0)} prerequisites
+- Missing prerequisites: {missing_fyp_list}
+
+**Student Question**: {message}
+
+Provide a clear, well-formatted response using the course data above. If asked for semester planning, use specific course codes and format with clear sections."""
             prompt = context_str
         
         # Import Runner and ResponseTextDeltaEvent for agent

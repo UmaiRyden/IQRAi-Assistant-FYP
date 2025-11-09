@@ -115,9 +115,13 @@ The following information about Iqra University is available to you:
             
             self.index = self.pc.Index(self.pinecone_index_name)
             # Use model that produces 768-dimensional embeddings to match Pinecone index
+            print("🔄 Loading SentenceTransformer model (this may take a minute on first run)...")
             self.embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+            print("✅ SentenceTransformer model loaded")
         except Exception as e:
-            print(f"Warning: Failed to initialize Pinecone: {e}")
+            print(f"⚠️ Warning: Failed to initialize Pinecone: {e}")
+            import traceback
+            traceback.print_exc()
             self.pc = None
             self.index = None
             self.embedder = None
