@@ -146,10 +146,9 @@ The following information about Iqra University is available to you:
                 )
             
             self.index = self.pc.Index(self.pinecone_index_name)
-            # Use model that produces 768-dimensional embeddings to match Pinecone index
-            print("🔄 Loading SentenceTransformer model (this may take a minute on first run)...")
-            self.embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
-            print("✅ SentenceTransformer model loaded")
+            # DON'T load the model here - load it lazily when needed to save memory
+            self.embedder = None  # Will be loaded on first use
+            print("✅ Pinecone initialized (SentenceTransformer will load on first use)")
         except Exception as e:
             print(f"⚠️ Warning: Failed to initialize Pinecone: {e}")
             import traceback
@@ -158,13 +157,22 @@ The following information about Iqra University is available to you:
             self.index = None
             self.embedder = None
     
+    def _get_embedder(self):
+        """Lazy load SentenceTransformer model only when needed to save memory."""
+        if self.embedder is None:
+            print("🔄 Loading SentenceTransformer model (this may take a minute on first run)...")
+            self.embedder = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+            print("✅ SentenceTransformer model loaded")
+        return self.embedder
+    
     async def search_pinecone(self, query: str, session_id: str, top_k: int = 3) -> List[str]:
         """Search for relevant document chunks in Pinecone."""
-        if not self.index or not self.embedder:
+        if not self.index:
             return []
         
         try:
-            emb = self.embedder.encode(query).tolist()
+            embedder = self._get_embedder()  # Lazy load
+            emb = embedder.encode(query).tolist()
             res = self.index.query(
                 vector=emb,
                 top_k=top_k,
@@ -282,7 +290,7 @@ Do NOT refuse to answer just because the content is not about Iqra University.
         Returns:
             Dictionary with processing statistics
         """
-        if not self.index or not self.embedder:
+        if not self.index:
             raise ValueError("Pinecone is not initialized. Please set PINECONE_API_KEY.")
         
         # Extract text based on file type
@@ -310,10 +318,11 @@ Do NOT refuse to answer just because the content is not about Iqra University.
         # Generate embeddings and prepare vectors
         vectors = []
         filename = os.path.basename(file_path)
+        embedder = self._get_embedder()  # Lazy load
         
         for idx, chunk in enumerate(chunks):
             try:
-                emb = self.embedder.encode(chunk).tolist()
+                emb = embedder.encode(chunk).tolist()
                 vectors.append({
                     "id": f"{session_id}_{filename}_{idx}",
                     "values": emb,
