@@ -9,6 +9,7 @@ from pinecone import Pinecone, ServerlessSpec
 from sentence_transformers import SentenceTransformer
 from pinecone.exceptions import NotFoundException
 from app.utils.document_processor import DocumentProcessor
+from app.utils.feature_router import FeatureRouter
 
 # Load environment variables
 load_dotenv()
@@ -46,6 +47,37 @@ class AgentService:
     def _initialize_agent(self) -> Agent:
         """Initialize the OpenAI agent with university context."""
         context = """You are the official AI assistant for Iqra University. You help students, faculty, and visitors with university-related information and uploaded documents.
+
+CRITICAL - FEATURE ROUTING (HIGHEST PRIORITY):
+IQRAi has built-in features for common tasks. When users ask about these, you MUST guide them to use the features instead of providing generic instructions or templates.
+
+1. **EMAIL FEATURES** (send email, draft email, email template, email to department):
+   - DO NOT generate long email templates or instructions
+   - DO tell users about the built-in "Send Email" feature
+   - Guide them to use the 📧 Send Email button in the chat interface
+   - Only draft emails if they specifically ask you to draft one (then they can use the Send Email button)
+
+2. **COURSE ADVISOR** (transcript, course planning, prerequisites, semester plan, degree completion):
+   - DO NOT give generic course recommendations
+   - DO refer users to the "Course Advisor" tab in the sidebar
+   - Explain that it analyzes transcripts automatically and provides accurate recommendations
+   - Only answer general course questions if they're asking about course information, not planning
+
+3. **OBE VERIFICATION** (Bloom's taxonomy, OBE, question improvement, exam verification):
+   - DO NOT explain Bloom's taxonomy in detail or give generic advice
+   - DO refer users to the "OBE Verification" tab
+   - Explain its capabilities (verification, auto-detection, question rewriting)
+
+4. **LEARNING INTERFACE** (quiz, study help, Socratic mode, learning materials):
+   - DO NOT create quizzes or study guides manually
+   - DO refer users to the "Learning" tab
+   - Explain the Quiz Generator, Study Mode, and Socratic Mode features
+
+IMPORTANT ROUTING RULES:
+- If system message contains "FEATURE_GUIDANCE:", use that guidance exactly
+- Always prioritize in-app features over generic instructions
+- Be friendly and helpful when redirecting - explain WHY the feature is better
+- Only provide generic responses if no feature exists for the task
 
 PRIMARY ROLE - Iqra University Information:
 1. Answer questions about Iqra University (programs, admissions, policies, campus, etc.)
@@ -186,9 +218,11 @@ The following information about Iqra University is available to you:
             "content": message
         })
         
-        # Search for relevant uploaded documents (increased top_k for better context)
+        # Feature routing: Detect if user is asking about built-in features
+        has_document_context = False
         pinecone_context = await self.search_pinecone(message, session_id, top_k=5)
         if pinecone_context:
+            has_document_context = True
             # Make document context very clear and prominent
             doc_context = f"""
 📄 UPLOADED DOCUMENT CONTEXT (User has uploaded a document - prioritize this information):
@@ -204,6 +238,18 @@ Do NOT refuse to answer just because the content is not about Iqra University.
                 "role": "system",
                 "content": doc_context
             })
+        
+        # Check if user should be redirected to a feature (only if no document context)
+        if not has_document_context:
+            detected_feature = FeatureRouter.detect_feature(message)
+            if detected_feature:
+                feature_guidance = FeatureRouter.get_feature_guidance(detected_feature)
+                if feature_guidance:
+                    # Inject feature guidance into conversation
+                    conversation.append({
+                        "role": "system",
+                        "content": f"FEATURE_GUIDANCE: {feature_guidance}\n\nIMPORTANT: Use this guidance to redirect the user. Do NOT provide generic instructions or templates."
+                    })
         
         try:
             # Stream response from agent
