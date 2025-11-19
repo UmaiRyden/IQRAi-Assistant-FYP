@@ -8,11 +8,24 @@ import json
 import uuid
 from datetime import datetime
 import shutil
-from docx import Document
-from docx.shared import Inches, RGBColor
-from docx.enum.text import WD_ALIGN_PARAGRAPH
 import tempfile
 import os
+
+# Optional dependency: python-docx (used for OBE DOCX exports).
+# In serverless environments where it might not be installed, we disable DOCX export
+# instead of crashing the entire app.
+try:
+    from docx import Document
+    from docx.shared import Inches, RGBColor
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    DOCX_AVAILABLE = True
+except ImportError:
+    Document = None
+    Inches = None
+    RGBColor = None
+    WD_ALIGN_PARAGRAPH = None
+    DOCX_AVAILABLE = False
+    print("⚠️ python-docx not installed; DOCX export endpoints will be disabled.")
 
 from app.models.schemas import ChatRequest, ChatResponse, HealthResponse
 from app.services.agent_service import AgentService
@@ -670,6 +683,9 @@ def create_docx_from_obe_questions(questions: List[Dict], filename: str = "obe_q
     Returns:
         Path to created DOCX file
     """
+    if not DOCX_AVAILABLE:
+        raise RuntimeError("python-docx is not installed; DOCX export is unavailable.")
+
     doc = Document()
     
     # Add title
@@ -716,6 +732,12 @@ async def download_obe_questions(
     Returns:
         File download
     """
+    if not DOCX_AVAILABLE and format.lower() == "docx":
+        raise HTTPException(
+            status_code=500,
+            detail="DOCX export is not available on this deployment (python-docx not installed)."
+        )
+
     try:
         # Parse questions
         questions_list = json.loads(questions)

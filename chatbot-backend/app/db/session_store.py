@@ -15,15 +15,10 @@ class SessionStore:
             db_path: Path to SQLite database file (defaults to DATABASE_URL env var)
         """
         if db_path is None:
-            # On Vercel, the filesystem is read-only except for /tmp.
-            # Use /tmp/chat.db there to avoid write errors, regardless of DATABASE_URL.
-            if os.getenv("VERCEL") == "1":
-                db_path = "/tmp/chat.db"
-            else:
-                db_url = os.getenv("DATABASE_URL", "sqlite:///./chat.db")
-                # Remove sqlite:/// prefix if present
-                db_path = db_url.replace("sqlite:///", "").replace("sqlite://", "")
-
+            db_url = os.getenv("DATABASE_URL", "sqlite:///./chat.db")
+            # Remove sqlite:/// prefix if present
+            db_path = db_url.replace("sqlite:///", "").replace("sqlite://", "")
+        
         self.db_path = db_path
         self.db = None
     
