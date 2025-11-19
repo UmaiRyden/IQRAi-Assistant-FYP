@@ -2,13 +2,10 @@
   "version": 2,
   "functions": {
     "api/index.py": {
-      "runtime": "python3.11",
-      "maxDuration": 60
+      "runtime": "@vercel/[email protected]"
     }
   },
   "routes": [
     { "src": "/(.*)", "dest": "api/index.py" }
   ]
 }
-
-
