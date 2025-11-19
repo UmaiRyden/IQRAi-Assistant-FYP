@@ -5,23 +5,9 @@ from dotenv import load_dotenv
 from agents import Agent, Runner
 from openai.types.responses import ResponseTextDeltaEvent
 from openai import BadRequestError
-
-# Optional dependencies for document search (Pinecone + SentenceTransformer).
-# In minimal or serverless deployments where these are not installed, we
-# gracefully disable document-related features instead of crashing the app.
-try:
-    from pinecone import Pinecone, ServerlessSpec
-    from sentence_transformers import SentenceTransformer
-    from pinecone.exceptions import NotFoundException
-    PINECONE_AVAILABLE = True
-except ImportError:
-    Pinecone = None
-    ServerlessSpec = None
-    SentenceTransformer = None
-    NotFoundException = Exception
-    PINECONE_AVAILABLE = False
-    print("⚠️ pinecone / sentence-transformers not installed; document search features will be disabled.")
-
+from pinecone import Pinecone, ServerlessSpec
+from sentence_transformers import SentenceTransformer
+from pinecone.exceptions import NotFoundException
 from app.utils.document_processor import DocumentProcessor
 from app.utils.feature_router import FeatureRouter
 
@@ -136,12 +122,9 @@ The following information about Iqra University is available to you:
         """Initialize Pinecone for document embeddings."""
         self.pinecone_api_key = os.environ.get("PINECONE_API_KEY")
         self.pinecone_index_name = "iqra-docs"
-
-        # If Pinecone client or SentenceTransformer are unavailable, or API key missing,
-        # disable document features gracefully.
-        if not PINECONE_AVAILABLE or not self.pinecone_api_key:
-            print("Warning: Pinecone or SentenceTransformer not available, or PINECONE_API_KEY not set. "
-                  "Document upload features will be disabled.")
+        
+        if not self.pinecone_api_key:
+            print("Warning: PINECONE_API_KEY not set. Document upload features will be disabled.")
             self.pc = None
             self.index = None
             self.embedder = None

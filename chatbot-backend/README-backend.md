@@ -77,35 +77,6 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 The server will start at `http://localhost:8000`
 
-## Deploying the Backend to Vercel
-
-This backend is configured to run as a **Python Serverless Function** on Vercel, with the backend root set to `chatbot-backend/`.
-
-### Vercel Project Settings
-
-When creating or configuring the Vercel project for the backend, use:
-
-- **Root Directory**: `chatbot-backend`
-- **Install Command**: `pip install -r requirements.txt`
-- **Build Command**: `pip install -r requirements.txt`
-- **Output Directory**: `.`
-
-Vercel will:
-
-- Install Python dependencies from `requirements.txt`
-- Use `vercel.json` and `api/index.py` to expose the FastAPI app as a serverless function
-
-### Files Used by Vercel
-
-- `vercel.json` – routes all requests to `api/index.py` and configures the Python runtime.
-- `api/index.py` – re-exports the FastAPI `app` from `app/main.py` for Vercel.
-
-After deployment, your backend will be available at a URL like:
-
-- `https://<your-backend-project>.vercel.app`
-
-Use this URL in your frontend when calling the backend API (for example, `https://<your-backend-project>.vercel.app/chat/stream`).
-
 ## API Endpoints
 
 ### Health Check
