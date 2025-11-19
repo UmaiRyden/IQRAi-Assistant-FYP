@@ -16,7 +16,6 @@ aiosqlite
 httpx
 pydantic
 
-# Voice input dependencies
-openai-whisper
+# Voice/audio dependencies (backend currently does not run Whisper; frontend uses OpenAI Whisper API)
 pydub
 ffmpeg-python 
