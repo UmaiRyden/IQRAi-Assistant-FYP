@@ -1,5 +1,4 @@
 python-dotenv
-chainlit
 openai
 openai-agents
 PyPDF2
@@ -15,7 +14,3 @@ sqlalchemy
 aiosqlite
 httpx
 pydantic
-
-# Voice/audio dependencies (backend currently does not run Whisper; frontend uses OpenAI Whisper API)
-pydub
-ffmpeg-python 
